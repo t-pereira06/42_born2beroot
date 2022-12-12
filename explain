@@ -1,0 +1,38 @@
+LVM
+O Logical Volume Management (LVM) é uma forma de virtualização de armazenamento que oferece aos administradores do sistema uma abordagem mais flexível para gerir o espaço de armazenamento em disco do que o particionamento tradicional.  
+Este tipo de ferramenta de virtualização está localizado na pilha de driver de dispositivo no sistema operativo. Funciona dividindo os volumes físicos (PVs) em extensões físicas (PEs).  
+Os PEs são mapeados em extensões lógicas (LEs) que são agrupadas em grupos de volumes (VGs).  
+Estes grupos são vinculados em volumes lógicos (LVs) que atuam como partições de disco virtual e que podem ser gerenciados como tal usando o LVM. 
+
+grep 
+O grep é um utilitário da linha de comando para pesquisar conjuntos de dados de texto sem formatação para linhas que correspondam a uma expressão regular.  
+
+awk 
+O awk é uma linguagem de script usada para manipular dados e gerar relatórios. A linguagem de programação do comando awk não requer compilação e permite ao utilizador usar variáveis, funções numéricas, funções de string e operadores lógicos. 
+O awk é um utilitário que permite a um programador escrever programas minúsculos, mas eficazes, na forma de instruções que definem padrões de texto que devem ser pesquisados ​​em cada linha de um documento e a ação que deve ser executada quando uma correspondência é encontrada numa linha.  
+O awk pesquisa um ou mais arquivos para ver se eles contêm linhas que correspondem aos padrões especificados e, em seguida, executa as ações associadas.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Password Policy
+
+minlen=10
+quantidade minima de caracteres que deve conter a palavra-passe
+--------------------------------------------------------------------------------------------------------------------------------
+ucredit=-1
+deve, no minimo, conter um caracter maiusculo. Se conter um + em vez de um -, significa que apenas pode conter 1 letra maiuscula
+--------------------------------------------------------------------------------------------------------------------------------
+dcredit=-1
+deve, no minimo, conter um digito. Se conter um + em vez de um -, significa que apenas pode conter 1 digito
+--------------------------------------------------------------------------------------------------------------------------------
+maxrepeat=3
+nao pode conter mais de 3 caracteres iguais seguidos
+--------------------------------------------------------------------------------------------------------------------------------
+reject_username
+a palavra-passe nao pode conter o nome do utilizador
+--------------------------------------------------------------------------------------------------------------------------------
+difok=7
+deve conter, pelo menos, 7 caracteres que nao tenham feito parte da palavra-passe antiga
+--------------------------------------------------------------------------------------------------------------------------------
+enforce_for_root
+implementar estas politicas para o utilizador root
+--------------------------------------------------------------------------------------------------------------------------------

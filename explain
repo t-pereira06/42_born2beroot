@@ -1,11 +1,19 @@
-Diferences between apt and aptitude
+SELinux
 
-The first difference you will notice is that APT is a lower-level package manager, and Aptitude is a high-level package manager. 
-This means that APT can be used in other higher-level package managers.
-Another big difference is the functionality offered by both of the tools. Aptitude offers better functionality compared to apt-get. In fact, it contains the functionalities of apt-get, apt-mark, and apt-cache.
-For instance, apt-get can be used effectively for package up-gradation, installation, resolving dependencies, system up-gradation, and so on. However, Aptitude offers more features thanks to the inclusion of functionalities of apt-cache and apt-mark. This means Aptitude can be used for more functionality, including package search, setting package installation as automation or manual, and more refined actions on the packages.
+O SELinux define os controlos de acesso para as aplicacoes, processos e arquivos de um sistema. Usa políticas de segurança, que são um conjunto de regras que informam o SELinux o que pode ou não ser acessado, para impor o acesso permitido por uma política.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+SSH
 
+SSH, também conhecido como Secure Shell ou Secure Socket Shell, é um protocolo de rede que oferece aos utilizadors, especialmente aos administradores do sistema, uma maneira segura de ter acesso a um computador numa rede não segura.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Diferencas entre apt and aptitude
+
+A primeira diferença é que o APT é um gestor de pacotes de nível inferior e o Aptitude é um gestor de pacotes de alto nível.
+Isso significa que o APT pode ser usado noutros gestores de pacotes de nível superior.
+Outra grande diferença é a funcionalidade oferecida por ambas as ferramentas. O Aptitude oferece melhor funcionalidade em comparação com o apt-get, pois contém as funcionalidades do apt-get, apt-mark e apt-cache.
+Por exemplo, o apt-get pode ser usado para atualização de pacotes, instalação, resolução de dependências, atualização do sistema, etc No entanto, o Aptitude oferece mais recursos graças à inclusão de funcionalidades de apt-cache e apt-mark. Isso significa que o Aptitude pode ser usado para obter mais funcionalidades, incluindo pesquisa de pacotes, configuração de instalação de pacotes como automação ou manual e ações mais refinadas nos pacotes.
+O Aptitude vem com uma UI interativa, além da interface somente de texto. O APT, por outro lado, nao tem UI.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 LVM
 O Logical Volume Management (LVM) é uma forma de virtualização de armazenamento que oferece aos administradores do sistema uma abordagem mais flexível para gerir o espaço de armazenamento em disco do que o particionamento tradicional.  
 Este tipo de ferramenta de virtualização está localizado na pilha de driver de dispositivo no sistema operativo. Funciona dividindo os volumes físicos (PVs) em extensões físicas (PEs).  

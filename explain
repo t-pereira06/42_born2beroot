@@ -1,3 +1,11 @@
+Diferences between apt and aptitude
+
+The first difference you will notice is that APT is a lower-level package manager, and Aptitude is a high-level package manager. 
+This means that APT can be used in other higher-level package managers.
+Another big difference is the functionality offered by both of the tools. Aptitude offers better functionality compared to apt-get. In fact, it contains the functionalities of apt-get, apt-mark, and apt-cache.
+For instance, apt-get can be used effectively for package up-gradation, installation, resolving dependencies, system up-gradation, and so on. However, Aptitude offers more features thanks to the inclusion of functionalities of apt-cache and apt-mark. This means Aptitude can be used for more functionality, including package search, setting package installation as automation or manual, and more refined actions on the packages.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 LVM
 O Logical Volume Management (LVM) é uma forma de virtualização de armazenamento que oferece aos administradores do sistema uma abordagem mais flexível para gerir o espaço de armazenamento em disco do que o particionamento tradicional.  
 Este tipo de ferramenta de virtualização está localizado na pilha de driver de dispositivo no sistema operativo. Funciona dividindo os volumes físicos (PVs) em extensões físicas (PEs).  

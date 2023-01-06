@@ -13,12 +13,12 @@ vcpu=$(cat /proc/cpuinfo | grep processor | wc -l)
 memused=$(free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)", $3,$2,$3*100/$2 }')
 
 #diskusage
-diskusage=$(df -h | awk '$NF=="/"{printf "%d/%dGB (%s)", $3,$2,$5}')
+total_disk=$(df -Bg | grep '^/dev/' | grep -v '/boot$' | awk '{td += $2} END {print td}')
+used_disk=$(df -m | grep '^/dev/' | grep -v '/boot$' | awk '{ud += $3} END {print ud}')
+percent_disk=$(df -m | grep '^/dev/' | grep -v '/boot$' | awk '{ud += $3} {td+= $2} END {printf("%d"), (ud/td)*100}')
 
 #cpuload
-cpuload=$(vmstat 1 2 | tail -1 | awk '{printf $15}')
-cpu_op=$(expr 100 - $cpuload)
-cpu_fin=$(printf "%.1f" $cpu_op)
+cpuload=$(top -ibn1 | grep "%Cpu" | tr ',' ' ' | awk '{printf 100-$8"%"}')
 
 #lastboot
 lastboot=$(who -b | awk '{print $3,$4}')
@@ -44,8 +44,8 @@ wall "
 #CPU physical: $cpu
 #vCPU: $vcpu
 #Memory Usage: $memused
-#Disk Usage: $diskusage
-#CPU load: $cpu_fin%
+#Disk Usage: $used_disk/{$total_disk}GB ($percent_disk%)
+#CPU load: $cpuload
 #Last boot: $lastboot
 #LVM use: $lvmuse
 #Connexions TCP: $conttcp ESTABLISHED

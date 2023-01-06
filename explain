@@ -39,6 +39,9 @@ O awk é um utilitário que permite a um programador escrever programas minúscu
  
 O awk pesquisa um ou mais arquivos para ver se eles contêm linhas que correspondem aos padrões especificados e, em seguida, executa as ações associadas.
 
+wc -l
+conta quantas vezes existe uma palavra num ficheiro
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Password Policy
 
